@@ -1,0 +1,247 @@
+<html>
+    <head>
+        <!--link for the font used in p, the outfit family font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+        <title>Omelet Recipe</title>
+         <style>
+            .main-safety-container {
+            width: 100%;
+            max-width: 1440px; /* Adjust this to whatever your desktop design width was */
+            margin: 0 auto;    /* This magical line perfectly centers your site on big screens */
+            padding: 0 20px;
+            }
+            .my-box img {
+                width: 100%;            /* Forces image to span the full width of the card padding */
+                height: auto;           /* Maintains the correct image aspect ratio */
+                border-radius: 12px;    /* Gives the image smooth, rounded corners */
+                display: block;
+                margin-bottom: 30px;    /* Pushes the title text down slightly */
+}
+
+            .my-box {
+                background-color: white;
+                max-width: 650px;       /* Keeps the card narrow like the original */
+                margin: 40px auto;      /* Centers the card horizontally on the screen */
+                padding: 40px;          /* Adds breathing room inside the white box */
+                border-radius: 24px;    /* Smoothly rounds the corners of the card */
+                box-sizing: border-box;
+                }
+
+            body{
+                background-color: hsl(30, 54%, 90%);
+                padding: 20px;
+                 }
+                 h1{
+                    font-family: "Young Serif", serif;
+                    font-weight: 700;
+                    color: hsl(24, 5%, 18%);
+                 }
+               
+                 h3 {color: hsl(332, 51%, 32%);
+                font-family: "outfit", sans-serif;
+                font-weight: 600;}
+                
+                .ingredients{color:hsl(14, 45%, 36%);
+                font-family: "Young Serif", serif;
+                font-weight: 600;}
+                
+                .instructions{color:hsl(14, 45%, 36%);
+                font-family: "Young Serif", serif;  
+                font-weight: 600;}
+                
+                #nutrition{
+                    color:hsl(14, 45%, 36%);
+                font-family: "Young Serif", serif;
+                font-weight: 700;
+                }
+            
+                p{font-family: "Outfit", sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                color: hsl(30, 10%, 34%);
+            }
+            #preparation{
+                background-color: hsl(330, 100%, 98%); /* Very pale pink background */
+                padding: 24px;
+                border-radius: 12px;
+                margin: 24px 0;
+            }
+            .custom-bullet li::marker{
+                color:hsl(14, 45%, 36%);
+            }
+            .custom-bullet{ /* This is the class for preparation*/
+                list-style-position: outside;
+                font-family: "Outfit", sans-serif;
+                color: hsl(30, 10%, 34%)
+            }
+            .preparation-bold{
+                font-family: "Outfit", sans-serif;
+                font-weight: 600;
+                color: hsl(24, 5%, 18%);
+            }
+            #customize-bullets li::marker{ /* This is the class for ingredients*/
+                color:hsl(14, 45%, 36%);
+                font-family: "Outfit", sans-serif;
+                font-weight: 600;
+            }
+            #customize-bullets{
+                color: hsl(30, 10%, 34%)
+            }
+            .custom-bullets li::marker{ /* This is the class for instructions*/
+                color:hsl(14, 45%, 36%);
+                font-family: "Outfit", sans-serif;
+                font-weight: 600;   
+            }
+            .custom-bullets{
+                color: hsl(30, 10%, 34%)
+            }
+            .instructions-bold{
+                color: hsl(24, 5%, 18%);
+            }
+            ul{font-family: "Outfit", sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                padding-left: 20px;     /* Snaps the list items closely to the left margin */
+                margin-top: 16px;
+            }
+            #ul-li {
+                margin-bottom: 10px;    /* Adds slight spaces between each list item */
+            }
+            ol{font-family: "Outfit", sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                padding-left: 24px;
+            }
+            #ol-li{
+                margin-bottom: 12px;        /* Adds breathing room between each step */
+                padding-left: 8px;          /* Pushes the text slightly away from the number */
+                line-height: 1.5;
+            }
+            .nutrition-row {
+                font-family: "Outfit", sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: 12px 8px;            /* Adds vertical spacing between rows */
+                border-bottom: 1px solid #e3deda; /* Full-width divider line */
+                color: hsl(30, 10%, 34%);
+            }
+            /* Removes the bottom line from the very last row (Fat) */
+            .nutrition-row:last-of-type {
+                border-bottom: none;
+            }
+            /* The text elements on the left (Calories, Carbs, etc.) */
+            .nutrition-label {
+                 width: 50%;
+                color: #5f564d;
+                }
+
+            .nutrition-color {
+                color: hsl(14, 45%, 36%);
+                font-family: "Outfit", sans-serif;
+                font-weight: 700;
+                display: inline-block;
+  
+                /* ADD THIS */
+                width: 50%;        /* Gives the text room to align inside its own box and Left-aligns them perfectly from the center line*/
+                text-align: left;   /* Now this will successfully align the text to the left edge of that box */
+                }
+
+                /* Responsive styles for mobile screens */
+                @media (max-width: 600px) {
+            body {
+                background-color: white; /* The tan background goes away on mobile */
+                padding: 0;             /* Removes screen borders */
+                margin: 0;
+                }
+
+            .my-box {
+                max-width: 100%;        /* Card fills the full width */
+                margin: 0;              /* Removes the top/bottom spacing */
+                border-radius: 0;       /* Removes the outer card rounded corners */
+                padding: 24px;          /* Adds comfortable padding inside the mobile screen */
+                }
+
+            .my-box img {
+                width: 100vw;           /* Forces the image to fill the exact phone width */
+                margin-left: -24px;     /* Pulls image out to negate the card's left padding */
+                margin-right: -24px;    /* Pulls image out to negate the card's right padding */
+                margin-top: -24px;      /* Pulls image to the very top edge of the card */
+                border-radius: 0;       /* Removes the image's rounded corners on mobile */
+    
+                /* Optional backup to ensure it stays full width */
+                max-width: calc(100% + 48px); 
+                }
+            }
+
+        </style>
+    </head>
+    
+    <body>
+        <div class="my-box">
+        <img src="image-omelette.jpeg" alt="Omelette" >
+        
+        <h1>Simple Omelette Recipe</h1>
+        <p>An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats. </p>
+    
+    <div id="preparation">
+    <h3> Preparation Time </h3>
+    <ul class="custom-bullet">
+        <li id="ul-li"> <b class="preparation-bold">Total:</b> Approximately 10 minutes</li>
+       <br> <li id="ul-li"> <b class="preparation-bold">Preparation:</b> 5 minutes</li>
+       <br> <li id="ul-li"> <b class="preparation-bold">Cooking:</b> 5 minutes</li>
+    </ul>
+    </div>
+    
+    <h2 class="ingredients">Ingredients</h2>
+    <ul id="customize-bullets">
+        <li id="ul-li">2-3 large eggs</li>
+      <br>  <li id="ul-li">Salt, to taste</li>
+       <br>  <li id="ul-li">Pepper, to taste</li>
+       <br>  <li id="ul-li">1 tablespoon of butter or oil</li>
+       <br>  <li id="ul-li">Optional fillings:cheese, diced vegetables, cooked meats, herbs</li>
+    </ul>
+
+    <h2 class="instructions">Instructions</h2>
+    <ol class="custom-bullets">
+        <li id="ol-li"> <b class="instructions-bold">Beat the eggs:</b> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fuller texture.</li>
+       <br> <li id="ol-li"> <b class="instructions-bold">Heat the pan:</b> Place a non-stick frying pan over medium heat and add the butter or oil.</li>
+       <br> <li id="ol-li"> <b class="instructions-bold">Cook the omelette:</b> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs coat the surface.</li>
+       <br> <li id="ol-li"> <b class="instructions-bold">Add fillings (optional):</b> When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.</li>
+      <br>  <li id="ol-li"> <b class="instructions-bold">Fold and serve:</b> As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then side it onto a plate.</li>
+      <br>  <li id="ol-li"> <b class="instructions-bold">Enjoy:</b>Serve hot, with additional salt and pepper if needed.</li>
+    </ol>
+    
+    <h2 id="nutrition"> Nutrition</h2>
+    <p>The table below shows nutritional values per serving without the additional fillings.</p>
+
+    <div class="nutrition-row">
+  <span class="nutrition-label">Calories</span>
+  <span class="nutrition-color">277kcal</span>
+</div>
+
+<div class="nutrition-row">
+  <span class="nutrition-label">Carbs</span>
+  <span class="nutrition-color">0g</span>
+</div>
+
+<div class="nutrition-row">
+  <span class="nutrition-label">Protein</span>
+  <span class="nutrition-color">20g</span>
+</div>
+
+<div class="nutrition-row">
+  <span class="nutrition-label">Fat</span>
+  <span class="nutrition-color">22g</span>
+</div>
+
+
+</div>
+
+</body>
+
+</html>
